@@ -37,12 +37,12 @@ public class RoleController {
     }
 
     @PutMapping("/put/{role_id}")
-    public Role putRoleById(@PathVariable int role_id, @RequestBody Role newRole) {
+    public Role putRoleById(@PathVariable Integer role_id, @RequestBody Role newRole) {
         return roleService.putRoleById(role_id, newRole);
     }
 
     @DeleteMapping("/delete/{role_id}")
-    public String deleteRoleById(@PathVariable int role_id) {
+    public String deleteRoleById(@PathVariable Integer role_id) {
         return roleService.deleteRoleById(role_id);
     }
 }

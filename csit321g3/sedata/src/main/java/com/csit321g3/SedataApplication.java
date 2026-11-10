@@ -1,4 +1,4 @@
-package com.csit321g3._idiots.sedata;
+package com.csit321g3;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

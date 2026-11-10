@@ -10,20 +10,20 @@ import jakarta.persistence.GenerationType;
 public class Role {
     @Id 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int role_id;
+    private Integer role_id;
     private String role_name;
 
     public Role(){}
-    public Role(String role_name, int role_id){
+    public Role(String role_name, Integer role_id){
         this.role_name = role_name;
         this.role_id = role_id;
     }
 
-    public int getRole_id() {
+    public Integer getRole_id() {
         return role_id;
     }
 
-    public void setRole_id(int role_id) {
+    public void setRole_id(Integer role_id) {
         this.role_id = role_id;
     }
 

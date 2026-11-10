@@ -26,7 +26,7 @@ public class RoleService {
     }
 
     @SuppressWarnings("finally")
-    public Role putRoleById(int role_id, Role newRole) {
+    public Role putRoleById(Integer role_id, Role newRole) {
         Role role = new Role();
         try {
             role = roleRepository.findById(role_id).get();
@@ -38,7 +38,7 @@ public class RoleService {
         }
     }
 
-    public String deleteRoleById(int role_id) {
+    public String deleteRoleById(Integer role_id) {
         String message = "";
        
         if(roleRepository.findById(role_id) != null) {
