@@ -1,3 +1,4 @@
+package com.csit321g3.entity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
