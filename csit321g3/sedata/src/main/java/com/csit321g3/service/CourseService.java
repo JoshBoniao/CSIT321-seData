@@ -34,7 +34,7 @@ public class CourseService{
 
     //Update
     @SuppressWarnings ("finally")
-    public Course putCourse(int id, Course newCourseDetails){
+    public Course putCourse(Integer id, Course newCourseDetails){
         try{
             Course course = courserepo.findById(id).get();
             course.setInstructor_id(newCourseDetails.getInstructor_id());
@@ -49,7 +49,7 @@ public class CourseService{
     }
 
     //Delete
-    public String deleteCourse(int id){
+    public String deleteCourse(Integer id){
         String msg = "";
         if(courserepo.findById(id) != null){
             courserepo.deleteById(id);
