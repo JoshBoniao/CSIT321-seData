@@ -69,4 +69,12 @@ public class CourseService{
         error.setTimeStamp(System.currentTimeMillis());
         return new ResponseEntity<NameErrorResponse>(error, HttpStatus.NOT_FOUND);
     }
+    @ExceptionHandler 
+    public ResponseEntity<NameErrorResponse> handleException(Exception ex){
+        NameErrorResponse error = new NameErrorResponse();
+        error.setStatus(HttpStatus.BAD_REQUEST.value());
+        error.setMessage(ex.getMessage());
+        error.setTimeStamp(System.currentTimeMillis());
+        return new ResponseEntity<NameErrorResponse>(error, HttpStatus.BAD_REQUEST);
+    }
 }
