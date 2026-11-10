@@ -42,13 +42,13 @@ public class CourseController {
 
     // U - Update
     @PutMapping("/put")
-    public Course putCourse(@RequestParam int id, @RequestBody Course newCourseDetails) {
+    public Course putCourse(@RequestParam Integer id, @RequestBody Course newCourseDetails) {
         return courseservice.putCourse(id, newCourseDetails);
     }
 
     // D - Delete
     @DeleteMapping("/delete/{id}")
-    public String deleteCourse(@PathVariable int id) {
+    public String deleteCourse(@PathVariable Integer id) {
         return courseservice.deleteCourse(id);
     }
 }
